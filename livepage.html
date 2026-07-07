@@ -1,275 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Management System</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    background:#eef3f9;
-}
-
-header{
-    background:#2563eb;
-    color:white;
-    padding:18px 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-header ul{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
-
-header li{
-    cursor:pointer;
-}
-
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:40px auto;
-}
-
-.hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:40px;
-    margin-bottom:50px;
-}
-
-.left{
-    flex:1;
-}
-
-.left h1{
-    font-size:48px;
-    color:#1e293b;
-}
-
-.left p{
-    margin:20px 0;
-    color:#555;
-    line-height:1.7;
-}
-
-button{
-    padding:12px 22px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    margin-right:10px;
-    font-size:15px;
-}
-
-.primary{
-    background:#2563eb;
-    color:white;
-}
-
-.secondary{
-    background:white;
-    border:2px solid #2563eb;
-    color:#2563eb;
-}
-
-.card{
-    flex:1;
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 8px 20px rgba(0,0,0,.1);
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    margin-top:20px;
-}
-
-.box{
-    background:#dbeafe;
-    padding:20px;
-    text-align:center;
-    border-radius:10px;
-}
-
-.box h2{
-    color:#2563eb;
-}
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.feature{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    text-align:center;
-}
-
-.feature h3{
-    color:#2563eb;
-    margin-bottom:10px;
-}
-
-footer{
-    margin-top:50px;
-    background:#1e293b;
-    color:white;
-    text-align:center;
-    padding:18px;
-}
-
-@media(max-width:768px){
-.hero{
-    flex-direction:column;
-    text-align:center;
-}
-
-header{
-    flex-direction:column;
-    gap:15px;
-}
-
-header ul{
-    flex-wrap:wrap;
-    justify-content:center;
-}
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
 </head>
 <body>
 
-<header>
-    <h2>StudentMS</h2>
+    <header>
+        <h2>StudentMS</h2>
 
-    <ul>
-        <li>Home</li>
-        <li>Students</li>
-        <li>Attendance</li>
-        <li>Courses</li>
-        <li>Results</li>
-    </ul>
-</header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Students</a></li>
+                <li><a href="#">Attendance</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Results</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="container">
+    <main>
 
-    <section class="hero">
+        <section>
+            <div>
+                <h1>Student Management System</h1>
 
-        <div class="left">
-            <h1>Student Management System</h1>
+                <p>
+                    Manage student records, attendance, courses, grades,
+                    and academic performance from one place.
+                </p>
 
-            <p>
-                A modern platform to manage students, attendance,
-                courses, grades, and academic records with ease.
-            </p>
+                <button onclick="showMessage()">Get Started</button>
+                <button>Learn More</button>
+            </div>
 
-            <button class="primary" onclick="showMessage()">
-                Get Started
-            </button>
+            <div>
+                <h2>Dashboard Overview</h2>
 
-            <button class="secondary">
-                Learn More
-            </button>
-
-        </div>
-
-        <div class="card">
-
-            <h2>Dashboard Overview</h2>
-
-            <div class="stats">
-
-                <div class="box">
-                    <h2 id="students">1200</h2>
+                <div>
+                    <h3 id="students">1200</h3>
                     <p>Students</p>
                 </div>
 
-                <div class="box">
-                    <h2>45</h2>
+                <div>
+                    <h3>45</h3>
                     <p>Teachers</p>
                 </div>
 
-                <div class="box">
-                    <h2>95%</h2>
+                <div>
+                    <h3>95%</h3>
                     <p>Attendance</p>
                 </div>
 
-                <div class="box">
-                    <h2>30</h2>
+                <div>
+                    <h3>30</h3>
                     <p>Courses</p>
                 </div>
-
             </div>
+        </section>
 
-        </div>
+        <section>
+            <article>
+                <h3>Student Records</h3>
+                <p>Add, edit, update and delete student information.</p>
+            </article>
 
-    </section>
+            <article>
+                <h3>Attendance</h3>
+                <p>Track attendance and generate reports.</p>
+            </article>
 
-    <section class="features">
+            <article>
+                <h3>Results</h3>
+                <p>Manage grades and academic performance.</p>
+            </article>
+        </section>
 
-        <div class="feature">
-            <h3>Student Records</h3>
-            <p>Add, edit, update and remove student details.</p>
-        </div>
+    </main>
 
-        <div class="feature">
-            <h3>Attendance</h3>
-            <p>Track daily attendance and generate reports.</p>
-        </div>
+    <footer>
+        <p>&copy; 2026 Student Management System</p>
+    </footer>
 
-        <div class="feature">
-            <h3>Results</h3>
-            <p>Manage marks, grades and performance records.</p>
-        </div>
-
-    </section>
-
-</div>
-
-<footer>
-    © 2026 Student Management System | Designed with HTML, CSS & JavaScript
-</footer>
-
-<script>
-function showMessage(){
-    alert("Welcome to the Student Management System!");
-}
-
-// Small animation for student count
-let count = 0;
-const target = 1200;
-const student = document.getElementById("students");
-
-const interval = setInterval(() => {
-    count += 20;
-    student.textContent = count;
-
-    if(count >= target){
-        student.textContent = target;
-        clearInterval(interval);
-    }
-}, 20);
-</script>
+    <script>
+        function showMessage() {
+            alert("Welcome to the Student Management System!");
+        }
+    </script>
 
 </body>
 </html>
